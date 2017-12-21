@@ -1,0 +1,91 @@
+/* pages/userInfo/userInfo.wxss */
+.userInfo{
+  background: url(http://112.109.215.18:8101/wechatWX/images/userInfo.jpg) no-repeat center;
+  padding: 35rpx 30rpx;
+  line-height: 110rpx;
+}
+.userInfo image{
+  display: inline-block;
+  width: 110rpx;
+  vertical-align: middle;
+  margin-right: 35rpx;
+  border-radius: 50%;
+}
+.userInfo text {
+  color: #fff;
+  font-size: 36rpx;
+  margin-right: 10rpx;
+}
+
+/* 订单分类 */
+.orderState{
+  background: #fff;
+  height: 150rpx;
+  overflow: hidden;
+  padding: 35rpx 0;
+  box-sizing: border-box;
+  margin-bottom: 16rpx;
+}
+.orderList {
+  float: left;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  color: #ababab;
+}
+.stateWrap {
+  position: relative;
+}
+.stateWrap .ifont {
+  font-size: 38rpx;  
+}
+.state{
+  font-size: 24rpx;
+  color: #999;
+}
+.number{
+  position: absolute;
+  width: 32rpx;
+  height: 32rpx;
+  background-color: #ec6314;
+  border: solid 1px #ffffff;
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 32rpx;
+  top: 0;
+  left: calc(50% + 10rpx);
+  border-radius: 50%;
+}
+
+
+.navTo{
+  height: 90rpx;
+  background: #fff;
+  color: #333;
+  padding: 30rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+.navTo:last-child{
+  border: none;
+}
+.navTo .ifont{
+  font-size: 30rpx;
+  color: #aaa;
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

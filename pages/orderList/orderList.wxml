@@ -1,0 +1,69 @@
+<!--pages/orderList/orderList.wxml-->
+<view class='containerW'>
+  <view class='orderState'>
+    <view bindtap='triggleOrder' data-index='{{index}}' wx:for="{{orderState}}" wx:key="orderState" class='{{item.active ? "active" : ""}}'>{{item.stateStr}}</view>
+  </view>
+
+  <view class='orderList' wx:for="{{orderList}}" wx:key="orderList" bindtap='orderDetail' data-index='{{orderListIndex}}' wx:for-item="orderListItem" wx:for-index="orderListIndex">
+    <!-- 门店 -->
+    <view class='store orderFor'>
+      <view class='state'>{{orderListItem.stateStr}}</view>
+      <text class='icon ifont font-mendian'></text>
+      <text class='orderStore'>{{orderListItem.store}}</text>
+    </view>
+
+    <!-- 产品列表 -->
+    <view class='orderFor'>
+      <view class='product' wx:for="{{orderListItem.product}}" wx:key="product" wx:for-item="productItem" wx:for-index="productIndex">
+        <view class="productImg">
+          <image mode='widthFix' src="{{productItem.image}}"></image>
+        </view>
+        <view class='productTitle'>{{productItem.name}}</view>
+        <view class='productT'>
+          <view class='productPrice'>￥{{productItem.price}}</view>
+          <view class='productNumber'>x{{productItem.count}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 合计 -->
+    <view class='orderCalc'>
+      <view class='orderMoney'>
+        共{{orderListItem.numberCalc}}件商品 合计：￥{{orderListItem.total}}(含运费￥{{orderListItem.freight}})
+      </view> 
+      <view class='orderAction' wx:if='{{orderListItem.actionOne || orderListItem.actionTwo}}'>
+        <button wx:if='{{orderListItem.actionOne}}'>{{orderListItem.actionOne}}</button>
+        <button wx:if='{{orderListItem.actionTwo}}' catchtap='cancelOrder' data-index='{{orderListIndex}}'>{{orderListItem.actionTwo}}</button>
+      </view>
+    </view>
+    
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

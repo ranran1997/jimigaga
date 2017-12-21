@@ -1,0 +1,131 @@
+/* pages/login/login.wxss */
+page{
+  width: 100%;
+  background: url(http://112.109.215.18:8101/wechatWX/images/2.jpg) no-repeat center; 
+  background-size: 100%;
+}
+.containerW{
+  /* height: 730rpx; */
+  width: calc(100% - 50rpx);
+  border: 1px solid #ddd;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  padding: 50rpx 40rpx;
+  margin: 170rpx auto 0;
+  background: #fff;
+}
+.user{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.font-wode,
+.font-suo,
+.font-duanxin {
+  float: left;
+  line-height: 90rpx;
+  color: #ccc;
+  font-size: 30rpx;
+}
+.font-cha1{
+  float: right;
+  color: #ccc;
+  font-size: 30rpx;
+}
+input {
+  display: inline-block;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.name {
+  width: calc(100% - 100rpx);
+}
+.code{
+  width: 320rpx;
+}
+.getCode {
+  font-size: 24rpx;
+  color: #eb5e1b;
+  width: 200rpx;
+  text-align: center;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  float: right;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 25rpx;
+  border-radius: 0;
+  padding: 0
+}
+button::after{
+  border: none;
+}
+.login {
+  height: 84rpx;
+  line-height: 84rpx;
+  border-radius: 10rpx;
+  background-color: #eb5e1b;
+  margin-top: 60rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+.usePassword{
+  text-align: center;
+  color: #eb5e1b;
+  font-size: 24rpx;
+  margin-top: 50rpx;
+  margin-bottom: 80rpx;
+}
+.nav{
+  text-align: right;
+  color: #666;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+/* 其他方式登录 */
+.other {
+  text-align: center;
+}
+.otherLogin {
+  font-size: 22rpx;
+  color: #999;
+  display: block;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.otherLogin::before,
+.otherLogin::after{
+  display: block;
+  width: 160rpx;
+  content: '';
+  border-top: 1px solid #eee;
+}
+.otherLogin::before{
+  float: left;
+  position: relative;
+  top:11rpx;
+  left: 36rpx;
+}
+.otherLogin::after{
+  float: right;
+  position: relative;
+  top: 11rpx;
+  right: 36rpx;
+}
+.font-weixin1{
+  font-size: 50rpx;
+  color: #31b84f;
+}
+
+
+
+
+
+
+
+

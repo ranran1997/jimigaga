@@ -1,0 +1,43 @@
+<!--pages/loginBefore/loginBefore.wxml-->
+<view class='containerW'>
+  <view class='userInfo'>
+    <image class='imgSrc' mode='widthFix' src='{{userInfo.avatarUrl}}'></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <view class='hello'>亲爱的微信用户： </view>
+  <view>为了给您更好的服务，请绑定一个吉米呷呷账号</view>
+  <view class='gaga'>还没有吉米嘎嘎账号？</view>
+  <button class='frist' catchtap='register' data-have-password='false'>快速注册</button>
+  <view class='gaga'>已有吉米嘎嘎账号？</view>
+  <button  catchtap='register' data-have-password='true'>立即关联</button>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

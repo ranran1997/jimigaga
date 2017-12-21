@@ -1,0 +1,149 @@
+/* pages/search/search.wxss */
+@import '../template/template.wxss';
+
+.containerW{
+  padding-top: 104rpx;
+}
+
+/* 搜索框 */
+.search {
+  border-top: 1px solid #f2f2f2;
+  background: #fff;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 88rpx;
+  top:0;
+  left: 0;
+}
+.searchWrap {
+  width: calc(100% - 40rpx);
+  height: 54rpx;
+  margin: 15rpx 20rpx;
+  background: #f2f2f2;
+  border-radius: 28rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.searchInput{
+  display: inline-block;
+  margin-left: 20rpx;
+  width: calc(100% - 50rpx);
+  height: 54rpx;
+  font-size: 24rpx;
+  vertical-align: middle;
+}
+
+/* 历史记录 */
+.history{
+  width: 100%;
+  padding: 20rpx;
+  padding-top: 108rpx; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.history text {
+  display: inline-block;
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  border: 1px solid #ccc;
+  color: #bbb;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 6rpx;
+}
+.clearHistory {
+  text-align: center;
+  font-size: 24rpx;
+  border-top: 1px solid #bbb;
+}
+.clearHistory text {
+  color: #666;
+  border: none;
+  padding: 0;
+}
+
+
+/* 产品列表 */
+.productLists {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 15rpx;
+}
+.productListImg {
+  position: relative;
+}
+.productListActivity {
+  position: absolute;
+  right:0;
+  bottom: 10rpx;
+  padding: 5rpx 10rpx;
+  font-size: 20rpx;
+  color:#fff;
+  height: 30rpx;
+  border-radius: 15rpx;
+  background-color: #ff5557;
+}
+.productDescription {
+  font-size: 30rpx;
+  color:#333;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  line-height: 1.2;
+}
+.productMoney {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.productTotal {
+  font-size: 32rpx;
+  color:#ec6313;
+  line-height: 1.13;
+}
+.productOldTotal {
+  color:#999;
+  font-size: 24rpx;
+  position: relative;
+  margin-left: 20rpx;
+}
+.productOldTotal::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2rpx;
+  background: #999;
+  left: 0;
+  top:50%;
+}
+.productBuy {
+  width: 160rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  background-color: #ec6313;
+  color:#fff;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 26rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<!--pages/collection/collection.wxml-->
+<view class='containerW'>
+  <view class='loseWrap' wx:if="{{loseProductLists.length > 0}}">
+    <view class='productLists'>
+      <view class='list' wx:for='{{loseProductLists}}' wx:key="loseProductLists" bindtouchstart="mytouchstart"
+      bindtouchend="mytouchend" bindtap='productDetail' data-id='{{item.id}}' data-scid='{{item.scid}}' data-index='{{index}}'>
+        <view class='productListImg'>
+          <image src='{{item.imgSrc}}' mode='widthFix'></image>
+        </view>
+        <view class='productListDesc'>
+          <view class='productListTitle'>{{item.title}}</view>
+          <view class='productListDetail'>
+            <view class='productListTotal'>
+              ￥<text class='productListTotalBig'>{{item.totalBig}}</text>.{{item.totalSmall}}
+            </view>
+            <view class='productListAction'>
+              <view class='goAlign' catchtap='addCart' data-id='{{item.id}}' data-scid='{{item.scid}}'>加入购物车</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 购物车图标 -->
+  <view class='cartC' bindtap='goToCart'>
+    <view class='cartW'>
+      <text class='icon ifont font-yunshangcheng'></text>
+      <text class='number'>{{cartNumber}}</text>
+    </view>
+  </view>
+</view>
+
+  <!-- 购物车空空如也 -->
+  <import src='../template/template.wxml' />
+  <template is="dataNull" data='{{text: "你还没有收藏的商品呢~",condition:(loseProductLists.length) == 0}}' />
+
+  <template is="noMore" data='{{more}}' />
+
+
+

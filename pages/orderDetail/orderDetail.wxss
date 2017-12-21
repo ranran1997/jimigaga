@@ -1,0 +1,197 @@
+/* pages/orderDetail/orderDetail.wxss */
+.containerW {
+  border-top: 1px solid #f2f2f2;
+  padding-bottom: 100rpx;
+}
+.orderWrap {
+  background: #fff;
+  padding: 24rpx 20rpx;
+  margin-bottom: 16rpx;
+  overflow: hidden;
+}
+.orderState {
+  font-size: 30rpx;
+  color: #ec6728;
+  line-height: 1.5;
+}
+.orderNumber,
+.orderTime {
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 1.5;
+}
+.font-peisongfangshi,
+.font-dingwei{
+  font-size: 40rpx;
+  color: #bbb;
+  margin-right: 16rpx;
+  float: left;
+}
+.send {
+  float: left;
+  width: calc(100% - 60rpx);
+}
+.sendName {
+  font-size: 28rpx;
+  line-height: 1.5;
+  color: #333333;
+}
+.sendTime {
+  font-size: 24rpx;
+  color: #999999;
+  vertical-align: top;
+}
+.font-chevron-copy-copy-copy-copy-copy-copy {
+  float: right;
+  font-size: 30rpx;
+  color: #bbb;
+  line-height: 70rpx;
+}
+.address {
+  display: inline-block;
+  width: calc(100% - 74rpx);
+  vertical-align: top;
+}
+
+/* 门店信息 */
+.store{
+  height: 70rpx;
+  padding-left: 20rpx;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  line-height: 70rpx;
+}
+.font-mendian {
+  font-size: 28rpx;
+  color: #bbb;
+}
+.storeName {
+  font-size: 24rpx;
+  color: #333333;
+  margin-left: 20rpx;
+}
+
+/* 商品列表 */
+.productLists {
+  background: #fff;
+  overflow: hidden;
+  height: 550rpx;
+  padding: 0 20rpx 70rpx;
+  margin-bottom: 15rpx;
+  position: relative;
+}
+.productLists.active {
+  height: auto;
+}
+.list {
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+.productImg {
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+}
+.productTitle {
+  float: left;
+  width: 55%;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  color:#333;
+}
+.productDesc {
+  float: right;
+  text-align: right;
+  width: calc(45% - 180rpx);
+}
+.productDesc view {
+  font-size: 24rpx;
+  color:#333;
+}
+.productDesc text{
+  font-size: 24rpx;
+  color:#999;
+}
+
+.all {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 24rpx;
+  color:#999;
+  background: #fff;
+}
+.all .icon {
+  font-size: 24rpx;
+}
+.all .icon.active {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+/* 商品列表  :end*/
+
+/* 商品金额详情 */
+.showTotal {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 15rpx;
+}
+.showTotalD {
+  overflow: hidden;
+  font-size: 24rpx;
+}
+.showTotalTitle {
+  color:#999;
+  float: left;
+  line-height: 1.5;
+}
+.showTotalNum {
+  float: right;
+  color: #eb5e1b;
+  line-height: 1.5;
+}
+/* 商品金额详情 :end */
+
+/* 订单操作 */
+.orderAction{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  padding: 25rpx 20rpx;
+  box-shadow: -0px -1px 0 0 #d2d2d2
+}
+.orderAction button {
+  height: 50rpx;
+  border-radius: 5rpx;
+  border: 2rpx solid #bbbbbb;
+  font-size: 24rpx;
+  color: #333;
+  line-height: 50rpx;
+  width: 130rpx;
+  text-align: center;
+  float: right;
+  margin-left: 20rpx;
+  background: #fff;
+  padding: 0;
+}
+.orderAction button:first-child{
+  color: #eb5e1b;
+  border-color: #eb5e1b;
+}
+button::after{
+  border: none;
+}
+
+
+
+
+
+
+

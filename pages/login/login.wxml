@@ -1,0 +1,47 @@
+<!--pages/login/login.wxml-->
+<view class='containerW'>
+  <!-- 用户名 -->
+  <view class='user'>
+    <text class='icon ifont font-wode'></text>
+    <input type='text' class='name' value='{{name}}' placeholder='请输入{{havePassword ? "账号或手机号" : "手机号"}}' bindinput='userName'></input>
+    <text class='icon ifont font-cha1' catchtap='clearLogin'></text>
+  </view>
+
+  <!-- 短信验证码 -->
+  <view class='user' wx:if='{{!havePassword}}'>
+    <text class='icon ifont font-duanxin'></text>
+    <input type='number' class='code' value='{{password}}' placeholder='请输入验证码' bindinput='userPassword'></input>
+    <button class='getCode' catchtap='getCode' disabled='{{codeTime > 0 ? true : false}}'>
+      {{codeTime > 0 ? codeTime + 's ' : ''}}获取验证码
+    </button>
+  </view>
+
+  <!-- 注册 -->
+  <view class='user' wx:if='{{register}}'>
+    <text class='icon ifont font-suo'></text>
+    <input type='text' class='name' password='true' value='{{passwords}}' placeholder='请输入密码' bindinput='passwords'></input>
+  </view>
+  <view class='user' wx:if='{{register}}'>
+    <text class='icon ifont font-suo'></text>
+    <input type='text' class='name' password='true' value='{{passwordsAlign}}' 
+    placeholder='请再次输入密码' bindinput='passwordsAlign' bindblur='passwordsAlignBlur'></input>
+  </view>
+
+  <!-- 密码 -->
+  <view class='user' wx:if='{{havePassword}}'>
+    <text class='icon ifont font-suo'></text>
+    <input type='text' password class='code' value='{{password}}' placeholder='请输入密码' bindinput='userPassword'></input>
+  </view>
+
+  <button wx:if='{{!register}}' class='login' bindtap='login' disabled='{{password.length < 6 || name.length === 0}}'>登录</button>
+  <button wx:if='{{register}}' class='login' bindtap='register'
+  disabled='{{password.length < 6 || passwords !== passwordsAlign || passwordsAlign.length < 6}}'>登录并注册</button>
+  <view class='usePassword' wx:if='{{!havePassword}}' bindtap='switchLogin'>使用密码登录</view>
+  <view class='usePassword' wx:if='{{havePassword}}' bindtap='switchLogin'>使用手机号码登录</view>
+ 
+  <view class='other'>
+    <view class='otherLogin'>其他方式登录</view>
+    <text class='icon ifont font-weixin1' bindtap='wechatLogin'></text>
+  </view>
+   <navigator url='/pages/index/index' open-type='switchTab' hover-stop-propagation='true' class='nav'>暂不登录，再逛逛</navigator>
+</view>

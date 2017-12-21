@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class='searchWrap'>
+    <image mode='widthFix' src='../images/gagalogo-2-x.png' class='gagalogo'></image>
+    <input type='text' disabled='true' catchtap='search' placeholder='搜索店内商品' class='search' placeholder-class='search-placeholder' confirm-type='search'></input>
+    <icon type='search' size='12' color='#ee7a13' class='icon-search'></icon>
+  </view>
+  <!-- 搜索框end -->
+
+  <!-- banner -->
+  <swiper indicator-active-color='#ec6413' indicator-color='#fff' indicator-dots='true' autoplay='true' interval='3000' circular='true' class='indexSwiper'>
+    <block wx:for="{{swiperImgs}}" wx:key="swiperImgs">
+      <swiper-item>
+        <image class='indexSwiperImg' src='{{item.img}}' mode="widthFix"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- banner end -->
+
+  <!-- 产品分类 -->
+  <scroll-view scroll-x' class='productClassWrap' style='width:100%' scroll-into-view="{{toView}}" scroll-left="{{scrollLeft}}">
+    <view style='width:{{productClass.length*120}}rpx'>
+      <view catchtap='selectProduct' data-index='{{index}}' wx:for='{{productClass}}' wx:key='productClass'
+      class='productClass {{item.active ? "active" : ""}}' data-id='{{item.id}}'>
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 产品分类  end -->
+
+  <!-- 产品列表 -->
+  <view wx:for="{{productLists}}" wx:key="productLists" wx:for-item="productList" class='productLists' data-product-id='{{productList.id}}' bindtap='goToProductDetail'>
+    <view class='productListImg'>
+      <image mode='widthFix' src='{{productList.imgUrl}}'></image>
+    </view>
+    <view class='productDescription'>{{productList.description}}</view>
+    <view class='productMoney'>
+      <view class='floatL'>
+        <text class='productTotal'>{{'￥'+productList.total}}</text>
+        <text class='productOldTotal'>{{productList.oldTotal}}</text>
+      </view>
+      <view class='productBuy floatR'>下单购买</view>
+    </view>
+  </view>
+  <import src='../template/template.wxml' />
+  <template is="dataNull" data='{{text: "此类商品暂未上架~",condition: productLists.length == 0}}'></template>
+  <!-- 产品列表 end -->
+
+  <!-- 没有更多了 -->
+  <template is="noMore" data='{{more: pageIndex * 10 >= pageTotal}}'></template>
+</view>

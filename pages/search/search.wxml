@@ -1,0 +1,45 @@
+<!--pages/search/search.wxml-->
+<view class='containerW'>
+  <!-- 没找到您想要的商品 -->
+  <import src='../template/template.wxml' />
+  <template is="dataNull" data='{{text: "没找到您想要的商品~",condition: (productLists.length == 0 && searchKey.length != 0)}}' />
+
+  <!-- 搜索框 -->
+  <view class='search'>
+    <view class='searchWrap'>
+      <icon class='iconS' type='search' color='#bbb' size='12'></icon>
+      <input value='{{searchKey}}' type='text' auto-focus='true' confirm-type='search' bindblur='search'
+       placeholder='搜索店内商品' class='searchInput'></input>
+    </view>
+  </view>
+
+  <!-- 历史记录 -->
+  <view class='history' wx:if='{{productLists.length == 0 && history.length != 0}}'>
+    <text wx:for="{{history}}" wx:key="history">{{item}}</text>
+    <view class='clearHistory' bindtap='clearHistory'><text class='icon ifont font-iconfontshanchu'></text><text>清空历史记录</text></view>
+  </view>
+
+  <!-- 产品列表 -->
+  <view wx:for="{{productLists}}" wx:key="productLists" wx:for-item="productList" class='productLists' data-product-id='{{productList.id}}' bindtap='goToProductDetail'>
+    <view class='productListImg'>
+      <image mode='widthFix' src='{{productList.imgUrl}}'></image>
+      <text class='productListActivity' wx:if="{{productList.activity}}">{{productList.activity}}</text>
+    </view>
+    <view class='productDescription'>{{productList.description}}</view>
+    <view class='productMoney'>
+      <view class='floatL'>
+        <text class='productTotal'>{{'￥'+productList.total}}</text>
+        <text class='productOldTotal'>{{productList.oldTotal}}</text>
+      </view>
+      <view class='productBuy floatR'>下单购买</view>
+    </view>
+  </view>
+  <!-- 产品列表 end -->
+
+    <!-- 没有更多了 -->
+  <template is="noMore" data='{{more: pageIndex * 10 >= pageTotal && productLists.length > 0}}'></template>
+</view>
+
+
+
+

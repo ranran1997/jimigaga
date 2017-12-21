@@ -1,0 +1,23 @@
+/* pages/template/template.wxss */
+.cartNull {
+  text-align: center;
+  margin-top: 240rpx;
+  width: 100%;
+}
+.cartNull image{
+  width: 33.33%;
+  margin-bottom: 46rpx;
+}
+.cartNull view {
+  text-align: center;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.more{
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}

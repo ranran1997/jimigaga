@@ -1,0 +1,135 @@
+/* pages/orderList/orderList.wxss */
+.containerW{
+  padding-top: 104rpx;
+  box-sizing: border-box;
+}
+
+/* 订单状态列表 */
+.orderState {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background: #fff;
+  height: 88rpx;
+  width: 100%;
+  line-height: 88rpx;
+  border-top:1px solid #d2d2d2;
+  
+}
+.orderState view{
+  width: 20%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  float: left;
+  font-size: 28rpx;
+  color:#333;
+}
+.orderState .active {
+  border-bottom: 4rpx solid #ec6314;
+}
+
+                      /* 订单列表 */
+.orderList{
+  background: #fff;
+  padding-left: 20rpx;
+  margin-bottom: 16rpx;
+  font-size: 24rpx;
+  color:#333;
+}
+.orderFor {
+  padding-right: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #eee;
+  overflow: hidden;
+}
+/* 门店 */
+.store {
+  height: 70rpx;
+  padding-top: 20rpx;
+}
+.state {
+  float: right;
+  color: #ec6314;
+}
+.font-mendian {
+  font-size: 28rpx;
+  color: #bbb;
+  margin-right: 10rpx;
+}
+
+/* 产品列表 */
+.product{
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.productImg{
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.productTitle{
+  float: left;
+  width: 60%;
+  height: 140rpx;
+  overflow: hidden;
+}
+.productT {
+  float: right;
+  width: calc(40% - 160rpx);
+  height: 140rpx;
+  overflow: hidden;
+  text-align: right;
+}
+.productPrice {
+  color: #ec6314;
+}
+.productNumber {
+  color: #999;
+}
+
+/* 合计 */
+.orderCalc{
+  padding-right: 20rpx;
+}
+.orderMoney{
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: right;
+  color: #999;
+}
+.orderAction{
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.orderAction button {
+  float: right;
+  font-size: 24rpx;
+  width: 130rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 5rpx;
+  background-color: #fff;
+  border: solid 1px #bbbbbb;
+  padding: 0;
+  margin-left: 20rpx;
+}
+.orderAction button:first-child{
+  color: #ec6314;
+  border-color: #ec6314;
+}
+button::after{
+  border:none;
+}
+
+
+
+
+
+
+
+

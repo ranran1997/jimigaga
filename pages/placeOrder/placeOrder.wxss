@@ -1,0 +1,188 @@
+/* pages/placeOrder/placeOrder.wxss */
+.wrap{
+  padding-bottom: 100rpx;
+}
+.productLists {
+  background: #fff;
+  overflow: hidden;
+  height: 550rpx;
+  padding: 0 20rpx 70rpx;
+  margin-bottom: 15rpx;
+  position: relative;
+}
+.productLists.active {
+  height: auto;
+}
+.list {
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+.productImg {
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+}
+.productTitle {
+  float: left;
+  width: 55%;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  color:#333;
+}
+.productDesc {
+  float: right;
+  text-align: right;
+  width: calc(45% - 180rpx);
+}
+.productDesc view {
+  font-size: 24rpx;
+  color:#333;
+}
+.productDesc text{
+  font-size: 24rpx;
+  color:#999;
+}
+
+.all {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 24rpx;
+  color:#999;
+  background: #fff;
+}
+.all .icon {
+  font-size: 24rpx;
+}
+.all .icon.active {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+/* 配送方式 */
+.shipping {
+  background: #fff;
+  padding: 20rpx;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin-bottom: 15rpx;
+}
+.shippingTitle {
+  color:#333;
+  font-size: 28rpx;
+  margin-bottom: 6rpx;
+}
+.shippingMethod {
+  overflow: hidden;
+}
+.shippingMethodList {
+  float: left;
+  font-size: 24rpx;
+  color:#333;
+  padding: 12rpx 26rpx;
+  border: 1px solid #e4e4e4;
+  border-radius: 4rpx;
+  margin: 20rpx;
+  margin-left: 0;
+}
+.shippingMethodList.shippingActive {
+  color: #eb5e1b;
+  border: 1px solid #eb5e1b;
+}
+.shippingAddress {
+  padding: 20rpx;
+  padding-left: 0;
+  border-top:1px solid #e4e4e4;
+  overflow: hidden;
+}
+.shippingUser {
+  float: left;
+  width: calc(100% - 130rpx);
+}
+.shippingName,
+.shippingAddressDetail {
+  color:#333;
+  font-size: 28rpx;
+}
+.shippingAddressDetail {
+  font-size: 24rpx;
+  color:#666;
+}
+.font-location {
+  color: #eb5e1b;
+}
+.shippingAddressSelect {
+  width: 90rpx;
+  float: right;
+  font-size: 24rpx;
+  line-height: 70rpx;
+  color:#666;
+  margin-right: -14rpx;
+}
+.font-chevron-copy-copy-copy-copy-copy-copy {
+  font-size: 24rpx;
+}
+
+/* 商品金额详情 */
+.showTotal {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 15rpx;
+}
+.showTotalD {
+  overflow: hidden;
+  font-size: 24rpx;
+}
+.showTotalTitle {
+  color:#999;
+  float: left;
+  line-height: 1.5;
+}
+.showTotalNum {
+  float: right;
+  color: #eb5e1b;
+  line-height: 1.5;
+}
+
+
+/* 总金额 */
+.total {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  background: #fff;
+  width: 100%;
+  height: 100rpx;
+  box-shadow: -0px -1px 0 0 #d2d2d2;
+}
+.total button {
+  background: #eb5e1b;
+  color:#fff;
+  border: none;
+  float: right;
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  border-radius: 0;
+}
+.total view{
+  font-size: 24rpx;
+  color:#666;
+  float: right;
+  line-height: 100rpx;
+  margin-right: 20rpx;
+}
+.total text{
+  color: #eb5e1b;
+}
+.total .totalBig {
+  font-size: 34rpx;
+}
+

@@ -1,0 +1,67 @@
+<!--pages/placeOrder/placeOrder.wxml-->
+<view class='wrap'>
+
+  <!-- 商品列表 -->
+  <view class='productLists  {{active ? "active" :""}}' style='{{productLists.length < 3 ? "height: auto" : ""}}'>
+    <view class='list' wx:for="{{productLists}}" wx:key="productLists">
+      <image class='productImg' mode='widthFix' src='{{item.imgSrc}}'></image>
+      <view class='productTitle'>{{item.title}}</view>
+      <view class='productDesc'>
+        <view>￥{{item.total}}</view>
+        <text>x {{item.count}}</text>
+      </view>
+    </view>
+    <view class='all' bindtap='showAll'>共{{productListsCount}}件商品 
+      <text wx:if="{{productLists.length > 2}}" class='icon ifont font-chevron-copy-copy-copy {{active ? "active" :""}}'></text>
+    </view>
+  </view>
+
+  <!-- 配送方式 -->
+  <view class='shipping'>
+    <view class='shippingTitle'>配送方式</view>
+    <view class='shippingMethod'>
+      <view class='shippingMethodList {{shippingMethod ? "shippingActive" : ""}}' bindtap='shippingMethod' data-shipping='true'>同城配送</view>
+      <view class='shippingMethodList {{shippingMethod ? "" : "shippingActive"}}' bindtap='shippingMethod'  data-shipping='false'>门店自提</view>
+    </view>
+
+    <!-- 同城配送 地址 -->
+    <view class='shippingAddress' wx:if='{{shippingMethod}}'>
+      <view class='shippingUser'>
+        <view class='shippingName'>{{addressInfo.name + "  " + addressInfo.mobile}}</view>
+        <view class='shippingAddressDetail'> <text class='icon ifont font-location'></text>{{addressInfo.address}}</view>
+      </view>
+      <view class='shippingAddressSelect' bindtap='gotoAddressList' > 选择 <text class='icon ifont font-chevron-copy-copy-copy-copy-copy-copy'></text></view>
+    </view>
+
+    <!-- 门店自提 地址 -->
+    <view class='shippingAddress' wx:if='{{!shippingMethod}}'>
+      <view class='shippingUser'>
+        <view class='shippingName'>石狮吉米呷呷生鲜店 059583029922</view>
+        <view class='shippingAddressDetail'> <text class='icon ifont font-location'></text>
+          福建省泉州市石狮市湖滨街道八七路豪富广场一期9-12号
+        </view>
+      </view>
+      <!-- <view class='shippingAddressSelect' bindtap='gotoAddressList' > 选择 <text class='icon ifont font-chevron-copy-copy-copy-copy-copy-copy'></text></view> -->
+    </view>
+
+  </view>
+
+  <!-- 金额详情展示 -->
+  <view class='showTotal'>
+    <view class='showTotalD'>
+      <text class='showTotalTitle'>商品金额</text> <text class='showTotalNum'>￥{{total}}</text>
+    </view>
+    <view class='showTotalD'>
+      <text class='showTotalTitle'>运费</text> <text class='showTotalNum'>+￥{{freight}}</text>
+    </view>
+    <view class='showTotalD'>
+      <text class='showTotalTitle'>优惠金额</text> <text class='showTotalNum'>-￥{{discount}}</text>
+    </view>
+  </view>
+
+  <!-- 商品总金额 -->
+  <view class='total'>
+    <button bindtap='submitOrder'>提交订单</button>
+    <view>应付款： <text>￥ <text class='totalBig'>{{totalBig}}</text>.{{totalSmall}}</text></view>
+  </view>
+</view>

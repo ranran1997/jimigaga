@@ -1,0 +1,146 @@
+/* pages/productDetail/productDetail.wxss */
+
+.productContent {
+  padding: 20rpx;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 16rpx;
+}
+.title {
+  font-size: 30rpx;
+  line-height: 1.4;
+  text-align: left;
+  color: #000000;
+}
+.description {
+  font-size: 24rpx;
+  line-height: 1.75;
+  text-align: left;
+  color: #666666;
+}
+.total {
+  color:#eb5e1b;
+  margin-top: 26rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  vertical-align: baseline;
+}
+.totalBig {
+  font-size: 44rpx;
+}
+.storeTotal {
+  font-size: 24rpx;
+  line-height: 1.75;
+  text-align: left;
+  color: #999999;
+  margin-top: 16rpx;
+}
+/* 门店地址 */
+.address {
+  overflow: hidden;
+  background: #fff;
+  height: 125rpx;
+  padding: 25rpx 16rpx;
+  margin-bottom: 15rpx;
+}
+.store {
+  width: 76rpx;
+  font-size: 24rpx;
+  color:#999999;
+}
+.tel {
+  color:#eb5e1b;
+  width: 32rpx;
+  margin-right: 14rpx;
+  line-height: 75rpx;
+  font-size:30rpx;
+}
+.storeDetail {
+  width: calc(100% - 164rpx);
+}
+.storeName {
+  font-size: 28rpx;
+  color:#333;
+}
+.lately {
+  color: #fff;
+  background: #eb5e1b;
+  font-size: 20rpx;
+  padding: 3rpx 6rpx;
+  margin-left: 10rpx;
+  border-radius: 6rpx;
+}
+.storeAddress {
+  font-size: 24rpx;
+  color:#999999;
+}
+
+/* 商品详情 */
+.productDetails {
+  background: #fff;
+  padding-bottom: 98rpx;
+}
+.detailsTitle {
+  font-size: 24rpx;
+  line-height: 1.75;
+  text-align: left;
+  color: #333333;
+  padding: 20rpx;
+}
+
+/* 底部操作栏 */
+.tarbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 98rpx;
+  padding: 16rpx 40rpx;
+  background-color: #ffffff;
+  box-shadow: -0px -2px 5px 0 rgba(0, 0, 0, 0.08);
+}
+.collection,
+.cart {
+  width:62rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color:#333;
+}
+.collection .icon,
+.cart .icon {
+  font-size: 40rpx;
+  color:#aaa;
+}
+.joinCart {
+  width:300rpx;
+  height: 60rpx;
+  margin: 3rpx auto;
+  border-radius: 30rpx;
+  background-color: #eb5e1b;
+  color:#fff;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.cartNum {
+  position: relative;
+}
+.cartCount {
+  position: absolute;
+  top:0;
+  right:0;
+  width: 26rpx;
+  height: 26rpx;
+  background-color: #eb5e1b;
+  color:#fff;
+  border-radius: 50%;
+  font-size: 18rpx;
+}
+.collection .icon.font-xing {
+  color: #eb5e1b;
+}
+
+
+
+
+

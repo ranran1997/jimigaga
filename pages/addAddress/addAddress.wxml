@@ -1,0 +1,46 @@
+<!--pages/addAddress/addAddress.wxml-->
+<view class='containerW'>
+  <view class='addressD'>
+    <view class='addressT'>收货人</view>
+    <view class='addressV'><input placeholder='请填写姓名' value='{{addressInfo.name}}' bindblur='addName' placeholder-class='gray'></input></view>
+  </view>
+  <view class='addressD'>
+    <view class='addressT'>联系电话</view>
+    <view class='addressV'><input placeholder='请填写联系电话' type='number' maxlength='11' value='{{addressInfo.mobile}}' bindblur='addMobile' placeholder-class='gray'></input></view>
+  </view>
+  <view class='addressD'>
+    <view class='addressT'>所在地区</view>
+    <view class='addressV'>
+      <picker mode="multiSelector" range='{{multiArray}}' bindchange="bindRegionChange" value="{{multiIndex}}"
+      range-key='name' bindcolumnchange = 'bindcolumnchange'>
+        <view class='{{region.length > 0 ? " " : "gray"}}' >
+           <!-- {{region.length > 0 ? region[0] + " " + region[1] + " " + region[2] : "请选择所在地区 >"}}  -->
+           {{multiArray[0][multiIndex[0]].name}}，{{multiArray[1][multiIndex[1]].name}}，{{multiArray[2][multiIndex[2]].name}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='addressD'>
+    <view class='addressT'>详细地址</view>
+    <view class='addressV gray' bindtap='addressDetail'>{{addressInfo.addressN}} ></view>
+  </view>
+  <view class='addressD'>
+    <textarea value='{{addressInfo.addressD}}' placeholder="补充详细信息(如门牌号/楼层号等)" class='gray' bindblur='detail'></textarea>
+  </view>
+</view>
+
+<!-- 设为默认地址 -->
+<view class='defaultAddress' bindtap='defaultAddress'>
+  <icon type='{{addressInfo.isDefault ? "success" : "circle"}}' color='{{addressInfo.isDefault ? "#ec6314" : "#ddd"}}' size='20'></icon>
+  <text>设为默认地址</text>
+</view>
+
+<!-- 保存 -->
+<button class='save' bindtap='save'>保存</button>
+
+
+
+
+
+
+

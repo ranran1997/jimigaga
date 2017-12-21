@@ -1,0 +1,71 @@
+<!--pages/cart/cart.wxml-->
+
+<view class='containerW'>
+  <!-- 购物车商品列表 -->
+  <view class='productLists' wx:if="{{productLists.length > 0}}">
+    <view class='list' wx:for='{{productLists}}' wx:key="productLists">
+      <icon type='{{item.checked ? "success" : "circle"}}' color="{{item.checked ? '#eb5e1b' : '#bbbbbb'}}" 
+      class='check' size="20" catchtap='checkedP' data-index='{{index}}'></icon>
+      <view class='productListImg' data-product-id='{{item.productid}}' catchtap='detail'>
+        <image src='{{item.imgSrc}}' mode='widthFix'></image>
+      </view>
+      <view class='productListDesc'>
+        <view class='productListTitle'>{{item.title}}</view>
+        <view class='productListStock'>商品库存：{{item.stock}}</view>
+        <view class='productListDetail'>
+          <view class='productListTotal'>
+            ￥<text class='productListTotalBig'>{{item.totalBig}}</text>.{{item.totalSmall}}
+          </view>
+          <view class='productListAction'>
+            <text class='productListReduce' catchtap='deleteCart' data-index='{{index}}'>-</text>
+            <text class='productListCount'>{{item.count}}</text>
+            <text class='productListPlus' catchtap='addCart' data-index='{{index}}'>+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 购物车失效商品列表 -->
+  <view class='loseWrap' wx:if="{{loseProductLists.length > 0}}">
+    <view class='productLists'>
+      <view class='loseTitle'>- 失效商品 -</view>
+      <view class='list' wx:for='{{loseProductLists}}' wx:key="loseProductLists">
+        <view class='productListImg' data-product-id='{{item.productid}}' catchtap='detail'>
+          <image src='{{item.imgSrc}}' mode='widthFix'></image>
+          <text class='lose'>已失效</text>
+        </view>
+        <view class='productListDesc'>
+          <view class='productListTitle'>{{item.title}}</view>
+          <view class='productListDetail'>
+            <view class='productListTotal'>
+              ￥<text class='productListTotalBig'>{{item.totalBig}}</text>.{{item.totalSmall}}
+            </view>
+            <view class='productListAction'>
+              <view class='goAlign'><navigator url='../index/index' open-type='switchTab' hover-stop-propagation='true'>再逛逛</navigator></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='clearLose' catchtap='clearLose'>清空失效商品</view>
+  </view>
+
+  <!-- 底部结算操作 -->
+  <view class='settlement' wx:if="{{productLists.length > 0}}">
+    <view class='checkedAll' catchtap='checkedAll'>
+      <icon type='{{checkedAll ? "success" : "circle"}}' color="{{checkedAll ? '#eb5e1b' : '#bbbbbb'}}"
+       class='checkedAllIcon' size="20"></icon>
+      <text>全选</text>
+    </view>
+    <button class='settlementCount' bindtap='settlement' disabled='{{settlementCount == 0}}'>结算({{settlementCount}})</button>
+    <view class='settlementTotal'> 
+         合计： <text class='numT'>￥<text class='settlementTotalBig'>{{settlementTotalBig}}</text>.{{settlementTotalSmall}}</text>   
+    </view>
+  </view>
+
+  <!-- 购物车空空如也 -->
+  <import src='../template/template.wxml' />
+  <template is="dataNull" data='{{text: "你的购物车空啦",condition:(productLists.length + loseProductLists.length) == 0}}' />
+
+</view>

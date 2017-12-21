@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/cart/cart",
+    "pages/userInfo/userInfo",
+    "pages/productDetail/productDetail",
+    "pages/placeOrder/placeOrder",
+    "pages/addressList/addressList",
+    "pages/addAddress/addAddress",
+    "pages/orderDetail/orderDetail",
+    "pages/orderList/orderList",
+    "pages/search/search",
+    "pages/template/template",
+    "pages/loginBefore/loginBefore",
+    "pages/login/login",
+    "pages/collection/collection"
+  ],
+  "window": {
+    "backgroundTextStyle": "#fff",
+    "navigationBarBackgroundColor": "#ec6413",
+    "navigationBarTitleText": "吉米呷呷",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/home-2-x.png",
+        "selectedIconPath": "pages/images/home-2-x-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "pages/images/shop-2-x.png",
+        "selectedIconPath": "pages/images/shop-2-x-active.png"
+      },
+      {
+        "pagePath": "pages/userInfo/userInfo",
+        "text": "我的",
+        "iconPath": "pages/images/mine-2-x.png",
+        "selectedIconPath": "pages/images/mine-2-x-active.png"
+      }
+    ],
+    "color": "#666",
+    "selectedColor": "#ec6313",
+    "backgroundColor": "white",
+    "position": "bottom"
+  },
+  "debug": true
+}

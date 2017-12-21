@@ -1,0 +1,11 @@
+<!--pages/template/template.wxml-->
+<template name="dataNull">
+  <view class='cartNull' wx:if="{{condition}}">
+    <image mode='widthFix' src='../images/6-6.png'></image>
+    <view>{{text}}</view>
+  </view>
+</template>
+
+<template name='noMore'>
+  <view class='more' wx:if='{{more}}'>没有更多了...</view>
+</template>

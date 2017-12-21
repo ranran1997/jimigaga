@@ -1,0 +1,92 @@
+/* pages/addAddress/addAddress.wxss */
+page {
+  border-top: 1px solid #f2f2f2;
+}
+.containerW {
+  background: #fff;
+  padding-left: 20rpx;
+}
+.addressD {
+  min-height: 90rpx;
+  border-bottom: 1px solid #f2f2f2;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color:#333;
+  overflow: hidden;
+  padding-right: 20rpx;
+}
+.addressT {
+  float: left;
+  width: 140rpx;
+  height: 90rpx;
+}
+.addressV {
+  float: right;
+  width: calc(100% - 160rpx);
+  height: 90rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+.addressV input{
+  height: 90rpx;
+}
+.gray {
+  color: #999;
+  font-size: 28rpx;
+  line-height: 90rpx;
+}
+.addressD textarea{
+  height: 100rpx;
+  line-height: 40rpx;
+  padding-top: 20rpx;
+  display: block;
+  width: 100%;
+}
+
+/* 设为默认地址 */
+.defaultAddress{
+  margin: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+.defaultAddress icon{
+  margin-right: 20rpx;
+}
+.defaultAddress text {
+  position: relative;
+  top: -8rpx;
+}
+
+/* 保存 */
+.save {
+  display: block;
+  width: calc(100% - 40rpx);
+  margin: 80rpx auto;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 30rpx;
+  background: #ec6314;
+  color: #fff;
+  border: none;
+  border-radius: 10rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

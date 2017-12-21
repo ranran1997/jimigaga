@@ -1,0 +1,45 @@
+<!--pages/addressList/addressList.wxml-->
+<view class='containerW'>
+  <radio-group bindchange='radioChange'>
+    <view class='addressTrue' wx:for="{{addressTrue}}" wx:key="addressTrue"
+    catchtap='addressCheck' data-address-id='{{item.id}}' data-index='{{index}}'>
+      <view class='addressInfo'>
+        <view class='userInfo'>{{item.name}}  {{item.mobile}}</view>
+        <view class='userAddress'>{{item.address}}</view>
+      </view>
+
+      <!-- 编辑地址 -->
+      <view class='editAddress' wx:if='{{edit}}'>
+        <view class='defaultAdd'>
+          <label>
+            <radio value='{{index}}' checked='{{item.isDefault}}' />
+            <text class='icon ifont {{item.isDefault ? "font-zhengque" : "radioDefault"}}'></text>
+            <text class='{{item.isDefault ? "textColor" : ""}}'>默认地址</text>
+          </label>
+        </view>
+        <view class='edit' catchtap='deleteAddress' data-index='{{index}}'>
+          <text class='icon ifont font-bianji'></text>
+          <text>删除</text>
+        </view>
+        <view class='edit' catchtap='editAddress' data-index='{{index}}'>
+          <text class='icon ifont font-iconfontshanchu'></text>
+          <text>编辑</text>
+        </view>
+      </view>
+    </view>
+  </radio-group>
+
+  <!-- 以下地址超出配送范围 -->
+  <block wx:if='{{addressFalse.length > 0}}'>
+    <view class='addressWarn'>以下地址超出配送范围</view>
+    <view class='addressTrue addressFalse addressInfo' wx:for="{{addressFalse}}" wx:key="addressFalse">
+      <view class='userInfo'>{{item.name}}  {{item.mobile}}</view>
+      <view class='userAddress'>{{item.address}}</view>
+    </view>
+  </block>
+
+  <!-- 新增地址入口 -->
+  <view class='addAddress' bindtap='addAddress'>
+    <button>新增地址</button>
+  </view>
+</view>

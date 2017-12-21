@@ -1,0 +1,130 @@
+/* pages/addressList/addressList.wxss */
+.containerW {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 108rpx;
+}
+.addressTrue {
+  background: #fff;
+  min-height: 150rpx;
+  margin-bottom: 20rpx;
+}
+.addressInfo{
+  padding: 20rpx;
+}
+.userInfo {
+  font-size: 28rpx;
+  color:#333;
+  margin: 10rpx 0;
+}
+.userAddress {
+  font-size: 24rpx;
+  color:#666;
+  line-height: 1.5;
+  margin-top: 10rpx;
+}
+.addressWarn {
+  font-size: 24rpx;
+  padding: 20rpx;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+.addressFalse .userInfo,
+.addressFalse .userAddress {
+  color: #999;
+}
+
+/* 新增地址 */
+.addAddress {
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 108rpx;
+  box-shadow: -0px -1px 0 0 #d2d2d2;
+  padding: 10rpx 20rpx;
+}
+.addAddress button {
+  display: block;
+  height: 88rpx;
+  border-radius: 10rpx;
+  background-color: #ec6314;
+  text-align: center;
+  line-height: 88rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+
+/* 地址编辑 */
+.editAddress{
+  border-top:1px solid #eee;
+  padding: 20rpx;
+  color: #666;
+  font-size: 24rpx;
+  height: 70rpx;
+  line-height: 30rpx;
+  overflow: hidden;
+}
+.defaultAdd{
+  line-height: 30rpx;
+}
+.defaultAdd text{
+  vertical-align: text-top;
+  color: #333;
+}
+.editAddress .ifont {
+  width: 26rpx;
+  height: 26rpx;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10rpx;
+  position: relative;
+  top: -2rpx;
+}
+.radioDefault{
+  border: 1px solid #aaa;
+}
+.defaultAdd .font-zhengque{
+  color: #ec6314;
+  font-size: 36rpx;
+  margin-right: 16rpx;
+}
+.editAddress radio{
+  display: none;
+  vertical-align: top;
+}
+.defaultAdd {
+  float: left;
+}
+.edit{
+  float: right;
+  margin-left: 20rpx;
+}
+.edit .icon{
+  margin-right: 10rpx;
+}
+.textColor {
+  color:#ec6314;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

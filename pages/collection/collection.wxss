@@ -1,0 +1,110 @@
+/* pages/collection/collection.wxss */
+.containerW{
+  position: relative;
+}
+.productLists {
+  margin: 15rpx 0;
+  background: #fff;
+}
+.loseWrap .productListDesc {
+  width: calc(100% - 160rpx);
+}
+.goAlign {
+  height: 50rpx;
+  border-radius: 5rpx;
+  background-color: #ffffff;
+  border: solid 1px #eb5e1b;
+  color:#eb5e1b;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+}
+.list {
+  overflow: hidden;
+  height: 180rpx;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.productListImg {
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+  position: relative;
+}
+.productListDesc {
+  float: right;
+  height: 140rpx;
+  width: calc(100% - 230rpx);
+  position: relative;
+}
+.productListTitle {
+  font-size: 28rpx;
+  text-align: left;
+  color: #333333;
+  height: 84rpx;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.productListTotal {
+  float: left;
+  font-size: 24rpx;
+  text-align: left;
+  color: #eb5e1b;
+  line-height: 2;
+}
+.productListTotalBig{
+  font-size: 30rpx;
+}
+.productListAction {
+  float: right;
+}
+
+/* 购物车 */
+.cartC{
+  position: fixed;
+  z-index: 8;
+  width: 90rpx;
+  height: 90rpx;
+  bottom: 80rpx;
+  right: 40rpx;
+}
+.cartW {
+  width: 100%;
+  height: 90rpx;
+  position: relative;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  line-height: 90rpx;
+  text-align: center;
+}
+.font-yunshangcheng {
+  color: #fff;
+  font-size: 40rpx;
+}
+.number{
+  position: absolute;
+  z-index: 9;
+  top:0;
+  right:0;
+  width: 25rpx;
+  height: 25rpx;
+  background-color: #e60012;
+  border: solid 1px #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25rpx;
+  font-size: 20rpx;
+  color: #fff;
+}
+
+
+
+
+@import '../template/template.wxss';
+
+
+
+
+
+
+

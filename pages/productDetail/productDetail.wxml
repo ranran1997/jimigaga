@@ -1,0 +1,63 @@
+<!--pages/productDetail/productDetail.wxml-->
+  <!-- banner -->
+  <swiper indicator-active-color='#ec6413' indicator-color='#fff' indicator-dots='true' autoplay='true' interval='3000' circular='true' class='indexSwiper'>
+    <block wx:for="{{swiperImgs}}" wx:key="swiperImgs">
+      <swiper-item>
+        <image class='indexSwiperImg' src='{{item}}' mode="widthFix"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- banner end -->
+
+  <!-- 商品价格 -->
+  <view class='productContent'>
+    <view class='title'>{{title}}</view>
+    <view class='description' wx:if='{{description}}'>{{description}}</view>
+    <view class='total'>
+      <view class='floatL'>
+        ￥<text class='totalBig'>{{totalBig}}</text><text class='totalSmall'>.{{totalSmall}}</text>
+      </view>
+      <view class='floatR storeTotal'>门店价：￥{{storeTotal}}</view>
+    </view>
+  </view>
+<!-- 商品价格 end -->
+
+<!-- 门店地址 -->
+  <view class='address'>
+    <view class='floatL store'>门店</view>
+    <view class='storeDetail floatL'>
+      <view class='storeName'>{{storeName}} <text class='lately'>最近</text></view>
+      <view class='storeAddress'> <text class='icon ifont font-dingwei'></text>{{storeAddress}}</view>
+    </view>
+    <view class='floatR tel' catchtap='callTel'><text class='icon ifont font-dianhua'></text></view>
+  </view>
+<!-- 门店地址 end -->
+
+<!-- 商品详情 -->
+  <view class='productDetails'>
+    <view class='detailsTitle'>商品详情</view>
+    <view class='detailsImg' wx:for="{{detailsImg}}" wx:key="detailsImg">
+      <image mode='widthFix' src='{{item}}'></image>
+    </view>
+  </view>
+<!-- 商品详情 end -->
+
+<!-- 底部操作栏 -->
+  <view class='tarbar'>
+    <view class='floatL collection' bindtap='collection'>
+      <text class='icon ifont {{collection ? "font-xing" : "font-wuxingkong"}}'></text>
+      <view>收藏</view>
+    </view>
+    <view class='floatR cart' bindtap='goToCart'>
+      <view class='cartNum'>
+        <text class='icon ifont font-gouwucheshoppingcart'></text>
+        <text wx:if="{{cartCount > 0}}" class='cartCount'>{{cartCount}}</text>
+      </view>
+      <view>购物车</view>
+    </view>
+    <view class='joinCart' bindtap='cartCount'>加入购物车</view>
+  </view>
+<!-- 底部操作栏 end-->
+
+
+

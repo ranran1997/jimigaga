@@ -1,0 +1,62 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class='containerW'>
+  
+  <!-- 用户信息 -->
+  <view class='userInfo'>
+    <image mode='widthFix' src='{{userInfo.avatarUrl}}'></image>
+    <text class='userName'>{{userInfo.nickName}}</text>
+    <text class='icon ifont font-vip1'></text>
+  </view>
+
+  <!-- 订单状态分类 -->
+  <view class='orderState'>
+    <view wx:for='{{orderState}}' wx:key='orderState' class='orderList' bindtap='orderList' data-state='{{item.state}}'>
+      <view class='stateWrap'>
+        <text class='icon ifont {{item.icon}}'></text>
+        <text wx:if='{{item.number > 0}}' class='number'>{{item.number}}</text>
+      </view>
+      <view class='state'>{{item.stateStr}}</view>
+    </view>
+  </view>
+
+  <view class='navTo' bindtap='addressList'>
+    <text class='icon ifont font-chevron-copy-copy-copy-copy-copy-copy'></text>
+    <view>收货地址</view>
+  </view>
+  <view class='navTo' bindtap='collection'>
+    <text class='icon ifont font-chevron-copy-copy-copy-copy-copy-copy'></text>
+    <view>我的收藏</view>
+  </view>
+  <view class='navTo' bindtap='logup'>
+    <text class='icon ifont font-chevron-copy-copy-copy-copy-copy-copy'></text>
+    <view>退出登录</view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

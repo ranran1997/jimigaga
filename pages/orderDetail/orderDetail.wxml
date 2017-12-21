@@ -1,0 +1,100 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<view class='containerW'>
+  <!-- 订单状态显示 -->
+  <view class='orderWrap'>
+    <view class='orderState'>{{orderState}}</view>
+    <view class='orderNumber'>交易单号 : {{orderNumber}}</view>
+    <view class='orderTime'>下单时间 : {{orderTime}}</view>
+  </view>
+
+   <!-- 配送员信息 
+  <view class='orderWrap'>
+    <text class='icon ifont font-peisongfangshi'></text>
+    <view class='send'>
+      <view class='sendName'>配送员{{sendName}}正快马加鞭为您送货中</view>
+      <view class='sendTime'>{{sendTime}}</view>
+    </view>
+    <text class='icon ifont font-chevron-copy-copy-copy-copy-copy-copy'></text>
+  </view> -->
+
+  <!-- 收货人信息 -->
+  <view class='orderWrap' wx:if='{{sendmode == 4}}'>
+    <text class='icon ifont font-dingwei'></text>
+    <view class='send'>
+      <view class='sendName'>姓名：{{name}}</view>
+      <view class='sendTime'>电话：{{mobile}}</view>
+      <view class='sendTime'><text>地址：</text><text class='address'>{{address}}</text></view>
+    </view>
+  </view>
+
+  <!-- 商品信息 -->
+
+  <!-- 商品列表 -->
+  <view class='store'>
+    <text class='icon ifont font-mendian'></text>
+    <text class='storeName'>{{store}}</text>
+  </view>
+  <view class='productLists  {{active ? "active" :""}}' style='height: {{productLists.length < 3 ? "auto" : ""}}'>
+    <view class='list' wx:for="{{productLists}}" wx:key="productLists">
+      <image class='productImg' mode='widthFix' src='{{item.image}}'></image>
+      <view class='productTitle'>{{item.name}}</view>
+      <view class='productDesc'>
+        <view>￥{{item.price}}</view>
+        <text>x {{item.count}}</text>
+      </view>
+    </view>
+    <view class='all' bindtap='showAll'>共{{productLists.length}}件商品 
+      <text wx:if="{{productLists.length > 2}}" class='icon ifont font-chevron-copy-copy-copy {{active ? "active" :""}}'></text>
+    </view>
+  </view>
+
+    <!-- 金额详情展示 -->
+  <view class='showTotal'>
+    <view class='showTotalD'>
+      <text class='showTotalTitle'>商品金额</text> <text class='showTotalNum'>￥{{total}}</text>
+    </view>
+    <view class='showTotalD'>
+      <text class='showTotalTitle'>运费</text> <text class='showTotalNum'>+￥{{freight}}</text>
+    </view>
+    <view class='showTotalD'>
+      <text class='showTotalTitle'>优惠金额</text> <text class='showTotalNum'>-￥{{discount}}</text>
+    </view>
+    <view class='showTotalD'>
+      <text class='showTotalTitle'>实付金额</text> <text class='showTotalNum'>￥{{amountTotal}}</text>
+    </view>
+  </view>
+
+  <!-- 订单操作 -->
+  <view class='orderAction' wx:if="{{state == 0}}">
+    <button catchtap='payment'>付款</button>
+    <button  catchtap='cancelOrder'>取消订单</button>
+  </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
